@@ -2,8 +2,8 @@ name: 价格监控
 
 on:
   schedule:
-    # 每 15 分钟运行一次 (北京时间)
-    - cron: '*/15 * * * *'
+    # 每 30 分钟运行一次
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
