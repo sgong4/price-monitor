@@ -77,7 +77,7 @@ def check_crypto():
         price = get_crypto_price(coin_id)
         if price:
             print(f"📊 {symbol}: ${price:.2f} (目标：${target})")
-            if price >= target:
+            if price < target:
                 alerts.append(f"🚨 {symbol} 突破 ${target}！当前：${price:.2f}")
     return alerts
 
@@ -88,7 +88,7 @@ def check_stocks():
         price = get_stock_price(symbol)
         if price:
             print(f"📈 {name}: ¥{price:.2f} (目标：¥{target})")
-            if price >= target:
+            if price < target:
                 alerts.append(f"🚨 {name} 突破 ¥{target}！当前：¥{price:.2f}")
     return alerts
 
